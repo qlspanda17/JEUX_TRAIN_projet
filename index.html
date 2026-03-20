@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniTrain - Jeu de Train</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚂 Mini Train</h1>
+            <div class="info-panel">
+
+                <div class="score-display">
+                    <span>Score: </span>
+                    <span id="score">0</span>
+                </div>
+
+                <div class="timer-display">
+                    <span>Temps: </span>
+                    <span id="timer">60</span>s
+                </div>
+
+                <div class="difficulty-display">
+                    <label for="difficulty">Difficulté:</label>
+                    <select id="difficulty">
+                        <option value="easy" >Facile</option>
+                        <option value="medium" selected>Moyen</option>
+                        <option value="hard">Difficile</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="controls">
+
+            <button id="startBtn" class="btn-primary">Démarrer</button>
+
+            <button id="resetBtn" class="btn-secondary">Réinitialiser</button>
+
+            <p class="instructions">Cliquez sur les jonctions pour les orienter et acheminer les trains vers leurs gares!</p>
+        </div>
+
+        <div id="gameOverScreen" class="game-over-screen hidden">
+            <div class="game-over-content">
+                <h2>Fin de la partie</h2>
+                <p>Score final: <span id="finalScore">0</span></p>
+
+                <button id="restartBtn" class="btn-primary">Nouvelle partie</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/class_carte.js"></script>
+    <script src="js/class_gare.js"></script>
+    <script src="js/class_jonction.js"></script>
+    <script src="js/class_minitrain.js"></script>
+    <script src="js/class_train.js"></script>
+    <script src="lance.js"></script>
+
+</body>
+</html>
